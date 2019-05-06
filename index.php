@@ -33,7 +33,7 @@
 <body>
 <header>
     <?php
-        include_once'./inc/Header.php';
+    include_once'./inc/Header.php';
     ?>
 </header>
 
