@@ -1,0 +1,71 @@
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+
+body, html
+{
+    background-color: darkslategray;
+    font-family: Verdana, sans-serif;
+}
+
+#ToernooiText
+{
+    font-weight: bold;
+    font-size: 30px;
+    color: #0d1c46;
+}
+#ToernooiText:hover
+{
+    color: #ee7d11;
+    font-size: 33px;
+}
+
+#NavBarText
+{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+#NavBarTextSpelersToevoegen:hover
+{
+    font-weight: bold;
+    color: #ee7d11;
+    font-size: 25px;
+}
+
+#NavBarTextToernooiOnderhoud:hover
+{
+    font-weight: bold;
+    font-size: 25px;
+    color: #ee7d11;
+}
+
+#FooterColor
+{
+    background-color: #f8f9fa;
+}
+
+.FormText
+{
+    font-weight: bold;
+    font-size: 37px;
+}
+
+.FooterText a
+{
+    font-weight: bold;
+    text-transform:  uppercase;
+    color: #007bff;
+}
+
+.FooterText a:hover
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ee7d11;
+    font-size: 17px;
+}
