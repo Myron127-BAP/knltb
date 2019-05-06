@@ -7,21 +7,37 @@
 
     if ($_SERVER['REQUEST_METHOD']== 'POST')
     {
-        $Succes = "Gebruiker is toegevoegd";
 
-        $Voornaam = $conn->real_escape_string($_POST['Voornaam_Register']);
-        $Achternaam = $conn->real_escape_string($_POST['Achternaam_Register']);
+        //Dit voorkomt dat er niet de zelfde personen toegevoegd worden in de database, Dit is uit gecommit aangezien er mensen zijn met de zelfde namen
 
-        $sql = "INSERT INTO spelers(voornaam, achternaam)" . "VALUES ('$Voornaam', '$Achternaam')";
+        //$Voornaam = $_POST['Voornaam_Register'];
 
-        if (mysqli_query($conn, $sql))
-        {
-            $_SESSION['message'] = "$Voornaam $Achternaam is toegevoegd";
-        }
-        else
+        //$query = "SELECT * FROM spelers WHERE voornaam= '".$Voornaam."'";
+
+        //$check = mysqli_query($conn, $query);
+
+        //if (mysqli_num_rows($check) >= 1)
+        //{
+        //    $_SESSION['message'] = "$Voornaam bestaat al";
+        //}
+        //else
+        //{
+
+        //Het toevoegen van personen in de Database
+            $Voornaam = $conn->real_escape_string($_POST['Voornaam_Register']);
+            $Achternaam = $conn->real_escape_string($_POST['Achternaam_Register']);
+
+            $sql = "INSERT INTO spelers(voornaam, achternaam)" . "VALUES ('$Voornaam', '$Achternaam')";
+
+            if (mysqli_query($conn, $sql))
             {
-                $_SESSION['message'] = "Speler is niet toegevoegd";
+                $_SESSION['message'] = "$Voornaam $Achternaam is toegevoegd";
             }
+            else
+                {
+                    $_SESSION['message'] = "Speler is niet toegevoegd";
+                }
+        //}
     }
 
 ?>
