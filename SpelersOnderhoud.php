@@ -53,7 +53,7 @@
     <br>
     <br>
     <form class="text-center p-5 col-md-4 offset-md-4 bg-light rounded position-relative" action="SpelersToevoegen.php" method="post" enctype="multipart/form-data">
-        <p class="FormText mb-4">De lijst met alle spelers</p>
+        <p class="FormText mb-4">Lijst met alle spelers</p>
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <p class="FormText mb-4"><?= $_SESSION['message']?></p>
