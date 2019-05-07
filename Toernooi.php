@@ -97,68 +97,71 @@
 
         /**Random Speler 1**/
         $randuser1 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id1'"; $Result1 = mysqli_query($conn, $randuser1);
-        while($row1 = mysqli_fetch_assoc($Result1)){echo $_SESSION['speler1'] = $row1['voornaam'] . " " . $row1['achternaam'] . "<br/>";}
+        while($row1 = mysqli_fetch_assoc($Result1)){echo $_SESSION['speler1'] = $row1['voornaam'] . " " . $row1['achternaam'];}
 
         /**Random Speler 2**/
         $randuser2 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id2'"; $Result2 = mysqli_query($conn, $randuser2);
-        while($row2 = mysqli_fetch_assoc($Result2)){echo  $_SESSION['speler2'] = $row2['voornaam'] . " " . $row2['achternaam'] . "<br/>"; }
+        while($row2 = mysqli_fetch_assoc($Result2)){echo  $_SESSION['speler2'] = $row2['voornaam'] . " " . $row2['achternaam'];}
 
         /**Random Speler 3**/
         $randuser3 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id3'"; $Result3 = mysqli_query($conn, $randuser3);
-        while($row3 = mysqli_fetch_assoc($Result3)){echo $_SESSION['speler3'] = $row3['voornaam'] . " " . $row3['achternaam'] . "<br/>";}
+        while($row3 = mysqli_fetch_assoc($Result3)){echo $_SESSION['speler3'] = $row3['voornaam'] . " " . $row3['achternaam'] ;}
 
         /**Random Speler 4**/
         $randuser4 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id4'"; $Result4 = mysqli_query($conn, $randuser4);
-        while($row4 = mysqli_fetch_assoc($Result4)){echo  $_SESSION['speler4'] = $row4['voornaam'] . " " . $row4['achternaam'] . "<br/>"; }
+        while($row4 = mysqli_fetch_assoc($Result4)){echo  $_SESSION['speler4'] = $row4['voornaam'] . " " . $row4['achternaam'];}
 
         /**Random Speler 5**/
         $randuser5 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id5'"; $Result5 = mysqli_query($conn, $randuser5);
-        while($row5 = mysqli_fetch_assoc($Result5)){echo $_SESSION['speler5'] = $row5['voornaam'] . " " . $row5['achternaam'] . "<br/>";}
+        while($row5 = mysqli_fetch_assoc($Result5)){echo $_SESSION['speler5'] = $row5['voornaam'] . " " . $row5['achternaam'] ;}
 
         /**Random Speler 6**/
         $randuser6 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id6'"; $Result6 = mysqli_query($conn, $randuser6);
-        while($row6 = mysqli_fetch_assoc($Result6)){echo  $_SESSION['speler6'] = $row6['voornaam'] . " " . $row6['achternaam'] . "<br/>"; }
+        while($row6 = mysqli_fetch_assoc($Result6)){echo  $_SESSION['speler6'] = $row6['voornaam'] . " " . $row6['achternaam'];}
 
         //Random Speler 7
         $randuser7 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id7'"; $Result7 = mysqli_query($conn, $randuser7);
-        while($row7 = mysqli_fetch_assoc($Result7)){echo  $_SESSION['speler7'] = $row7['voornaam'] . " " . $row7['achternaam'] . "<br/>"; }
+        while($row7 = mysqli_fetch_assoc($Result7)){echo  $_SESSION['speler7'] = $row7['voornaam'] . " " . $row7['achternaam'];}
 
         //Random Speler 8
         $randuser8 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id8'"; $Result8 = mysqli_query($conn, $randuser8);
-        while($row8 = mysqli_fetch_assoc($Result8)){echo  $_SESSION['speler8'] = $row8['voornaam'] . " " . $row8['achternaam'] . "<br/>"; }
+        while($row8 = mysqli_fetch_assoc($Result8)){echo  $_SESSION['speler8'] = $row8['voornaam'] . " " . $row8['achternaam'];}
 
         //Random Speler 9
         $randuser9 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id9'"; $Result9 = mysqli_query($conn, $randuser9);
-        while($row9 = mysqli_fetch_assoc($Result9)){echo  $_SESSION['speler9'] = $row9['voornaam'] . " " . $row9['achternaam'] . "<br/>"; }
+        while($row9 = mysqli_fetch_assoc($Result9)){echo  $_SESSION['speler9'] = $row9['voornaam'] . " " . $row9['achternaam'];}
 
         //Random Speler 10
         $randuser10 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id10'"; $Result10 = mysqli_query($conn, $randuser10);
-        while($row10 = mysqli_fetch_assoc($Result10)){echo  $_SESSION['speler10'] = $row10['voornaam'] . " " . $row10['achternaam'] . "<br/>"; }
+        while($row10 = mysqli_fetch_assoc($Result10)){echo  $_SESSION['speler10'] = $row10['voornaam'] . " " . $row10['achternaam'] ;}
 
         //Random Speler 11
         $randuser11 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id11'"; $Result11 = mysqli_query($conn, $randuser11);
-        while($row11 = mysqli_fetch_assoc($Result11)){echo  $_SESSION['speler11'] = $row11['voornaam'] . " " . $row11['achternaam'] . "<br/>"; }
+        while($row11 = mysqli_fetch_assoc($Result11)){echo  $_SESSION['speler11'] = $row11['voornaam'] . " " . $row11['achternaam'] ;}
 
         //Random Speler 12
         $randuser12 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id12'"; $Result12 = mysqli_query($conn, $randuser12);
-        while($row12 = mysqli_fetch_assoc($Result12)){echo  $_SESSION['speler12'] = $row12['voornaam'] . " " . $row12['achternaam'] . "<br/>"; }
+        while($row12 = mysqli_fetch_assoc($Result12)){echo  $_SESSION['speler12'] = $row12['voornaam'] . " " . $row12['achternaam'] ;}
 
         //Random Speler 13
         $randuser13 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id13'"; $Result13 = mysqli_query($conn, $randuser13);
-        while($row13 = mysqli_fetch_assoc($Result13)){echo  $_SESSION['speler13'] = $row13['voornaam'] . " " . $row13['achternaam'] . "<br/>"; }
+        while($row13 = mysqli_fetch_assoc($Result13)){echo  $_SESSION['speler13'] = $row13['voornaam'] . " " . $row13['achternaam'] ;}
 
         //Random Speler 14
         $randuser14 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id14'"; $Result14 = mysqli_query($conn, $randuser14);
-        while($row14 = mysqli_fetch_assoc($Result14)){echo  $_SESSION['speler14'] = $row14['voornaam'] . " " . $row14['achternaam'] . "<br/>"; }
+        while($row14 = mysqli_fetch_assoc($Result14)){echo  $_SESSION['speler14'] = $row14['voornaam'] . " " . $row14['achternaam'] ;}
 
         //Random Speler 15
         $randuser15 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id15'"; $Result15 = mysqli_query($conn, $randuser15);
-        while($row15 = mysqli_fetch_assoc($Result15)){echo  $_SESSION['speler15'] = $row15['voornaam'] . " " . $row15['achternaam'] . "<br/>"; }
+        while($row15 = mysqli_fetch_assoc($Result15)){echo  $_SESSION['speler15'] = $row15['voornaam'] . " " . $row15['achternaam'];}
 
         //Random Speler 16
         $randuser16 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id16'"; $Result16 = mysqli_query($conn, $randuser16);
-        while($row16 = mysqli_fetch_assoc($Result16)){echo  $_SESSION['speler16'] = $row16['voornaam'] . " " . $row16['achternaam'] . "<br/>"; }
+        while($row16 = mysqli_fetch_assoc($Result16)){echo  $_SESSION['speler16'] = $row16['voornaam'] . " " . $row16['achternaam'];}
 
+
+    //op 1 plaats maar 1,3 cijfer doen in het id en dan gwn kiezen wie daarin komt
+//dus in het eerste balkje komt elke of Myron of Tim of Finley
 
 
 
