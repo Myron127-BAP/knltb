@@ -11,10 +11,13 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto" id="NavBarText">
                 <li class="nav-item">
+                    <a class="nav-link" id="NavBarTextToernooiOnderhoud" href="./ToernooiOnderhoud.php">Toernooi Onderhoud</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" id="NavBarTextSpelersToevoegen" href="./SpelersToevoegen.php">Spelers toevoegen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="NavBarTextToernooiOnderhoud" href="./ToernooiOnderhoud.php">Toernooi Onderhoud</a>
+                    <a class="nav-link" id="NavBarTextSpelersToevoegen" href="./SpelersOnderhoud.php">Spelers Onderhouden</a>
                 </li>
         </div>
     </nav>

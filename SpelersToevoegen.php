@@ -26,12 +26,13 @@
         //Het toevoegen van personen in de Database
             $Voornaam = $conn->real_escape_string($_POST['Voornaam_Register']);
             $Achternaam = $conn->real_escape_string($_POST['Achternaam_Register']);
+            $School = ($_POST['School_Register']);
 
-            $sql = "INSERT INTO spelers(voornaam, achternaam)" . "VALUES ('$Voornaam', '$Achternaam')";
+            $sql = "INSERT INTO spelers(voornaam, achternaam, school)" . "VALUES ('$Voornaam', '$Achternaam', '$School')";
 
             if (mysqli_query($conn, $sql))
             {
-                $_SESSION['message'] = "$Voornaam $Achternaam is toegevoegd";
+                $_SESSION['message'] = "$Voornaam $Achternaam van $School is toegevoegd";
             }
             else
                 {
@@ -77,6 +78,23 @@
             </div>
             <div class="col-md-8 offset-md-2" style="margin-top: 10px">
                 <input type="text" name="Achternaam_Register" class="form-control mb-4" placeholder="Achternaam" required>
+            </div>
+            <div class="col-md-8 offset-md-2" style="margin-top: 10px">
+                <select class="form-control" name="School_Register">
+                    <option>Albeda College</option>
+                    <option>Da Vinci College</option>
+                    <option>Drenthe College</option>
+                    <option>Graafschap College</option>
+                    <option>Katholiek Onderwijs Vlaanderen</option>
+                    <option>Rijn Ijssel College</option>
+                    <option>ROC de Leijgraaf</option>
+                    <option>ROC Horizon College</option>
+                    <option>ROC ID College</option>
+                    <option>ROC Midden Nederland</option>
+                    <option>ROC TOP</option>
+                    <option>ROC A12</option>
+                    <option>Koning Willem I College</option>
+                </select>
             </div>
         </div>
         <button class="btn btn-info my-4 btn-block col-md-8 offset-md-2" type="submit" name="Submit_Speler">Speler toevoegen</button>

@@ -1,6 +1,9 @@
 <?php
 
 
+    include_once './inc/Database.inc.php';
+
+
     //$Speler1 = 5;
     //$Speler2 = 2;
 
@@ -35,7 +38,7 @@
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Istok+Web|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
 
-    <title>March Madness Stock Matchup</title>
+    <title>Tennistoernooi</title>
 </head>
 <body>
 <header>
@@ -54,67 +57,148 @@
                             <input name="score1" type="number" style="width: 30px">
                             <input name="score2" type="number" style="width: 30px">
                             <input name="score3" type="number" style="width: 30px"></span></li>
-                    <li class="team team-bottom">Speler2<span class="score">Uitslag</span></li>
+                    <li class="team team-bottom">Speler2<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top">Speler3<span class="score">Uitslag</span></li>
-                    <li class="team team-bottom">Speler4<span class="score">Uitslag</span></li>
+                    <li class="team team-top">Speler3<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom">Speler4<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top">Speler5<span class="score">Uitslag</span></li>
-                    <li class="team team-bottom">Speler6<span class="score">Uitslag</span></li>
+                    <li class="team team-top">Speler5<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom">Speler6<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top">Speler7<span class="score">Uitslag</span></li>
-                    <li class="team team-bottom">Speler8<span class="score">Uitslag</span></li>
+                    <li class="team team-top">Speler7<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom">Speler8<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top">Speler9<span class="score">Uitslag</span></li>
-                    <li class="team team-bottom">Speler10<span class="score">Uitslag</span></li>
+                    <li class="team team-top">Speler9<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom">Speler10<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top">Speler11<span class="score">Uitslag</span></li>
-                    <li class="team team-bottom">Speler12<span class="score">Uitslag</span></li>
+                    <li class="team team-top">Speler11<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom">Speler12<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top">Speler13<span class="score">Uitslag</span></li>
-                    <li class="team team-bottom">Speler14<span class="score">Uitslag</span></li>
+                    <li class="team team-top">Speler13<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom">Speler14<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top">Speler15<span class="score">Uitslag</span></li>
-                    <li class="team team-bottom">Speler16<span class="score">Uitslag</span></li>
+                    <li class="team team-top">Speler15<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom">Speler16<span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
             </div>  <!-- END ROUND ONE -->
 
             <div class="round round-two">
                 <div class="round-details">Ronde 2<br/></div>
                 <ul class="matchup">
-                    <li class="team team-top"><span class="score">Uitslag</span></li>
-                    <li class="team team-bottom"><span class="score">Uitslag</span></li>
+                    <li class="team team-top"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top"><span class="score">Uitslag</span></li>
-                    <li class="team team-bottom"><span class="score">Uitslag</span></li>
+                    <li class="team team-top"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top"><span class="score">Uitslag</span></li>
-                    <li class="team team-bottom"><span class="score">Uitslag</span></li>
+                    <li class="team team-top"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top"><span class="score">Uitslag</span></li>
-                    <li class="team team-bottom"><span class="score">Uitslag</span></li>
+                    <li class="team team-top"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
             </div>  <!-- END ROUND TWO -->
 
             <div class="round round-three">
                 <div class="round-details">Ronde 3<br/></div>
                 <ul class="matchup">
-                    <li class="team team-top"><span class="score">Uitslag</span></li>
-                    <li class="team team-bottom"><span class="score">Uitslag</span></li>
+                    <li class="team team-top"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top"><span class="score">Uitslag</span></li>
-                    <li class="team team-bottom"><span class="score">Uitslag</span></li>
+                    <li class="team team-top"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
             </div>  <!-- END ROUND THREE -->
         </div>
@@ -122,10 +206,16 @@
         <div class="champion">
             <div class="final">
                 <!--<i class="fa fa-trophy"></i>-->
-                <div class="round-details">Finale <br/></div>
+                <div class="round-details">Finale<br/></div>
                 <ul class ="matchup championship">
-                    <li class="team team-top"><span class="score">Uitslag</span></li>
-                    <li class="team team-bottom"><span class="score">Uitslag</span></li>
+                    <li class="team team-top"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
+                    <li class="team team-bottom"><span class="score">
+                            <input name="score1" type="number" style="width: 30px">
+                            <input name="score2" type="number" style="width: 30px">
+                            <input name="score3" type="number" style="width: 30px"></span></li>
                 </ul>
             </div>
         </div>
