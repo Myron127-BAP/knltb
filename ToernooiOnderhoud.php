@@ -28,7 +28,7 @@
         {
             while ($row = mysqli_fetch_assoc($Result))
             {
-                echo $_SESSION["message"] = $row['datum'] . "<br>" . $row['winnaar'] . "<br>" . $row['school'] . "<br>";
+                echo $_SESSION["message"] = "<p style='color: #2a6797'>" . $row['datum'] . $row['winnaar'] . $row['school'] . "</p>" ;
             }
         }
         else
