@@ -66,7 +66,7 @@
     ?>
 </header>
 
-<main style="background-color: darkslategray">
+<main style="background-color: #2a6797">
     <br>
     <br>
     <form class="text-center p-5 col-md-4 offset-md-4 bg-light rounded position-relative" action="SpelersToevoegen.php" method="post" enctype="multipart/form-data">

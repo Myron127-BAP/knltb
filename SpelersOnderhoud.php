@@ -2,6 +2,28 @@
 
     include_once './inc/Database.inc.php';
 
+    if ($conn)
+    {
+        $getuser = "SELECT voornaam, achternaam, school FROM spelers";
+        $Result = mysqli_query($conn, $getuser);
+
+        if (mysqli_num_rows($Result) > 0)
+        {
+            while ($row = mysqli_fetch_assoc($Result))
+            {
+                echo $_SESSION["message"] = $row['voornaam'] . "<br>" . $row['achternaam'] . "<br>" . $row['school'] . "<br>" . "<br>";
+            }
+        }
+        else
+            {
+                echo "Er zitten geen spelers in de database";
+            }
+    }
+    else
+    {
+        die("Er is iets fout gegaan" .mysqli_connect_error());
+    }
+
 ?>
 
 <!doctype html>
@@ -27,7 +49,18 @@
     ?>
 </header>
 
-<main style="background-color: darkslategray">
+<main style="background-color: #2a6797">
+    <br>
+    <br>
+    <form class="text-center p-5 col-md-4 offset-md-4 bg-light rounded position-relative" action="SpelersToevoegen.php" method="post" enctype="multipart/form-data">
+        <p class="FormText mb-4">De lijst met alle spelers</p>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <p class="FormText mb-4"><?= $_SESSION['message']?></p>
+            </div>
+        </div>
+        <button class="btn btn-info my-4 btn-block col-md-8 offset-md-2" type="submit" name="Submit_Speler">Speler toevoegen</button>
+    </form>
 
 </main>
 
