@@ -3,54 +3,13 @@
 
     include_once './inc/Database.inc.php';
 
-
-
-
-
-//$Speler1 = 5;
-//$Speler2 = 2;
-
-//if ($Speler1 > $Speler2)
-//{
-//    Echo "Speler 1 heeft gewonnen";
-//}
-//else
-//{
-//    echo "Speler 2 heeft gewonnen";
-//}
-
-//Gebruikers randomize. Gebruikers plaatsen vanuit de database
-
-    /**if ($conn)
-    {
-        $getuser = "SELECT voornaam, achternaam FROM spelers";
-        $Result = mysqli_query($conn, $getuser);
-
-        if (mysqli_num_rows($Result) > 0)
-        {
-            while ($row = mysqli_fetch_assoc($Result))
-            {
-                echo $row['voornaam'] . " " . $row['achternaam'] . "<br>" . "<br>";
-            }
-        }
-        else
-        {
-            echo "Toernooien  gevonden";
-        }
-    }
-    else
-    {
-        die("Er is iets fout gegaan" .mysqli_connect_error());
-    }
-
-     */
-
         $id1 = rand(1, 8);
         $id2 = rand(1, 8);
         $id3 = rand(1, 8);
         $id4 = rand(1, 8);
         $id5 = rand(1, 8);
         $id6 = rand(1, 8);
+
 
 
 
@@ -80,37 +39,31 @@
         /**Random Cijfer 5 $id5**/
         if ($id5 == $id6){$id5 = rand(1, 8);}
 
-        /**Random Cijfer 6 $id6
-        if ($id6 == $id2){$id2 = rand(1, 8);}
-        if ($id6 == $id3){$id6 = rand(1, 8);}
-        if ($id6 == $id4){$id6 = rand(1, 8);}
-        if ($id6 == $id5){$id6 = rand(1, 8);}
-         **/
-
-
         /**Radom Cijfer 1**/
         $randuser1 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id1'"; $Result1 = mysqli_query($conn, $randuser1);
-        while($row1 = mysqli_fetch_assoc($Result1)){echo $_SESSION['message1'] = $row1['voornaam'] . " " . $row1['achternaam'] . "<br/>";}
+        while($row1 = mysqli_fetch_assoc($Result1)){echo $_SESSION['speler1'] = $row1['voornaam'] . " " . $row1['achternaam'] . "<br/>";}
         /**Radom Cijfer 2**/
         $randuser2 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id2'"; $Result2 = mysqli_query($conn, $randuser2);
-        while($row2 = mysqli_fetch_assoc($Result2)){echo  $_SESSION['message2'] = $row2['voornaam'] . " " . $row2['achternaam'] . "<br/>"; }
+        while($row2 = mysqli_fetch_assoc($Result2)){echo  $_SESSION['speler2'] = $row2['voornaam'] . " " . $row2['achternaam'] . "<br/>"; }
         /**Radom Cijfer 3**/
         $randuser3 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id3'"; $Result3 = mysqli_query($conn, $randuser3);
-        while($row3 = mysqli_fetch_assoc($Result3)){echo $_SESSION['message3'] = $row3['voornaam'] . " " . $row3['achternaam'] . "<br/>";}
+        while($row3 = mysqli_fetch_assoc($Result3)){echo $_SESSION['speler3'] = $row3['voornaam'] . " " . $row3['achternaam'] . "<br/>";}
         /**Radom Cijfer 4**/
         $randuser4 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id4'"; $Result4 = mysqli_query($conn, $randuser4);
-        while($row4 = mysqli_fetch_assoc($Result4)){echo  $_SESSION['message4'] = $row4['voornaam'] . " " . $row4['achternaam'] . "<br/>"; }
+        while($row4 = mysqli_fetch_assoc($Result4)){echo  $_SESSION['speler4'] = $row4['voornaam'] . " " . $row4['achternaam'] . "<br/>"; }
         /**Radom Cijfer 5**/
         $randuser5 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id5'"; $Result5 = mysqli_query($conn, $randuser5);
-        while($row5 = mysqli_fetch_assoc($Result5)){echo $_SESSION['message5'] = $row5['voornaam'] . " " . $row5['achternaam'] . "<br/>";}
+        while($row5 = mysqli_fetch_assoc($Result5)){echo $_SESSION['speler5'] = $row5['voornaam'] . " " . $row5['achternaam'] . "<br/>";}
         /**Radom Cijfer 6**/
         $randuser6 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id6'"; $Result6 = mysqli_query($conn, $randuser6);
-        while($row6 = mysqli_fetch_assoc($Result6)){echo  $_SESSION['message6'] = $row6['voornaam'] . " " . $row6['achternaam'] . "<br/>"; }
+        while($row6 = mysqli_fetch_assoc($Result6)){echo  $_SESSION['speler6'] = $row6['voornaam'] . " " . $row6['achternaam'] . "<br/>"; }
+        //Random Cijfer 7
 
 
 
 
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -124,10 +77,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Herr+Von+Muellerhoff' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Istok+Web|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
 
     <title>Tennistoernooi</title>
 </head>
@@ -138,82 +87,85 @@
     ?>
 </header>
 
-<section id="bracket">
+<section id="toernooi">
     <div class="container">
         <div class="split split-one">
-            <div class="round round-one current">
-                <ul class="matchup">
-                    <li class="team team-top"><?= $_SESSION['message1']?><span class="score"></span></li>
-                    <li class="team team-bottom"><?= $_SESSION['message2']?><span class="score"></span></li>
+            <div class="ronde ronde-een">
+                <ul class="wedstrijd">
+                    <p class="ronde-details" style="margin-top: -20px; font-weight: bold;" >Ronde 1</p>
+                    <li class="speler speler-top"><?= $_SESSION['speler1']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['speler2']?><span class="score"></span></li>
                 </ul>
-                <ul class="matchup">
-                    <li class="team team-top"><?= $_SESSION['message3']?><span class="score"></span></li>
-                    <li class="team team-bottom"><?= $_SESSION['message4']?><span class="score"></span></li>
+                <ul class="wedstrijd">
+                    <li class="speler speler-top"><?= $_SESSION['speler3']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['speler4']?><span class="score"></span></li>
                 </ul>
-                <ul class="matchup">
-                    <li class="team team-top"><?= $_SESSION['message5']?><span class="score"></span></li>
-                    <li class="team team-bottom"><?= $_SESSION['message6']?><span class="score"></span></li>
+                <ul class="wedstrijd">
+                    <li class="speler speler-top"><?= $_SESSION['speler5']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['speler6']?><span class="score"></span></li>
                 </ul>
-                <ul class="matchup">
-                    <li class="team team-top"><?= $_SESSION['message7']?><span class="score"></span></li>
-                    <li class="team team-bottom"><?= $_SESSION['message8']?><span class="score"></span></li>
+                <ul class="wedstrijd">
+                    <li class="speler speler-top"><?= $_SESSION['speler']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['speler8']?><span class="score"></span></li>
                 </ul>
-                <ul class="matchup">
-                    <li class="team team-top"><?= $_SESSION['message9']?><span class="score"></span></li>
-                    <li class="team team-bottom"><?= $_SESSION['message10']?><span class="score"></span></li>
+                <ul class="wedstrijd">
+                    <li class="speler speler-top"><?= $_SESSION['speler9']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['speler10']?><span class="score"></span></li>
                 </ul>
-                <ul class="matchup">
-                    <li class="team team-top"><?= $_SESSION['message11']?><span class="score"></span></li>
-                    <li class="team team-bottom"><?= $_SESSION['message12']?><span class="score"></span></li>
+                <ul class="wedstrijd">
+                    <li class="speler speler-top"><?= $_SESSION['speler11']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['speler12']?><span class="score"></span></li>
                 </ul>
-                <ul class="matchup">
-                    <li class="team team-top"><?= $_SESSION['message13']?><span class="score"></span></li>
-                    <li class="team team-bottom"><?= $_SESSION['message14']?><span class="score"></span></li>
+                <ul class="wedstrijd">
+                    <li class="speler speler-top"><?= $_SESSION['speler13']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['speler14']?><span class="score"></span></li>
                 </ul>
-                <ul class="matchup">
-                    <li class="team team-top"><?= $_SESSION['message15']?><span class="score"></span></li>
-                    <li class="team team-bottom"><?= $_SESSION['message16']?><span class="score"></span></li>
+                <ul class="wedstrijd">
+                    <li class="speler speler-top"><?= $_SESSION['speler15']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['speler16']?><span class="score"></span></li>
                 </ul>
             </div>  <!-- END ROUND ONE -->
 
-            <div class="round round-two">
-                <ul class="matchup">
-                    <li class="team team-top"><?= $_SESSION['message17']?><span class="score"></span></li>
-                    <li class="team team-bottom"><?= $_SESSION['message18']?><span class="score"></span></li>
+            <div class="ronde ronde-twee">
+                <ul class="wedstrijd">
+                    <p class="ronde-details" style="margin-top: -30px; font-weight: bold">Ronde 2</p>
+                    <li class="speler speler-top"><?= $_SESSION['message17']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['message18']?><span class="score"></span></li>
                 </ul>
-                <ul class="matchup">
-                    <li class="team team-top"><?= $_SESSION['message19']?><span class="score"></span></li>
-                    <li class="team team-bottom"><?= $_SESSION['message20']?><span class="score"></span></li>
+                <ul class="wedstrijd" style="margin-top: 10px;">
+                    <li class="speler speler-top"><?= $_SESSION['message19']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['message20']?><span class="score"></span></li>
                 </ul>
-                <ul class="matchup">
-                    <li class="team team-top"><?= $_SESSION['message21']?><span class="score"></span></li>
-                    <li class="team team-bottom"><?= $_SESSION['message22']?><span class="score"></span></li>
+                <ul class="wedstrijd" style="margin-top: -20px;">
+                    <li class="speler speler-top"><?= $_SESSION['message21']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['message22']?><span class="score"></span></li>
                 </ul>
-                <ul class="matchup">
-                    <li class="team team-top"><?= $_SESSION['message23']?><span class="score"></span></li>
-                    <li class="team team-bottom"><?= $_SESSION['message24']?><span class="score"></span></li>
+                <ul class="wedstrijd" style="margin-top: 25px;">
+                    <li class="speler speler-top"><?= $_SESSION['message23']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['message24']?><span class="score"></span></li>
                 </ul>
             </div>  <!-- END ROUND TWO -->
 
-            <div class="round round-three">
-                <ul class="matchup">
-                    <li class="team team-top"><span class="score"></span></li>
-                    <li class="team team-bottom"><span class="score"></span></li>
+            <div class="ronde ronde-drie">
+                <ul class="wedstrijd" style="margin-left: 220px;">
+                    <p class="ronde-details" style="margin-top: -22px; font-weight: bold">Ronde 3</p>
+                    <li class="speler speler-top"><?= $_SESSION['message2']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['message2']?><span class="score"></span></li>
                 </ul>
-                <ul class="matchup">
-                    <li class="team team-top"><span class="score"></span></li>
-                    <li class="team team-bottom"><span class="score"></span></li>
+                <ul class="wedstrijd" style="margin-left: 220px;">
+                    <li class="speler speler-top"><?= $_SESSION['message2']?><span class="score"></span></li>
+                    <li class="speler speler-bottom"><?= $_SESSION['message2']?><span class="score"></span></li>
                 </ul>
             </div>  <!-- END ROUND THREE -->
         </div>
 
-        <div class="champion">
+        <div class="champion" style="margin-top: -70px; margin-left: 100px ">
             <div class="final">
-                <!--<i class="fa fa-trophy"></i>-->
-                <div class="round-details">Finale<br/></div>
-                <ul class ="matchup championship">
-                    <li class="team team-top"><span class="score"></span></li>
-                    <li class="team team-bottom"><span class="score"></span></li>
+                <i class="fa fa-trophy"></i>
+                <div class="ronde-details">Finale</div>
+                <ul class ="wedstrijd championship">
+                    <li class="speler speler-top"><span class="score"></span></li>
+                    <li class="speler speler-bottom"><span class="score"></span></li>
                 </ul>
             </div>
         </div>
