@@ -15,11 +15,11 @@ html
 {
     font-weight: bold;
     font-size: 30px;
-    color: #0d1c46;
+    color: #2a6797;
 }
 #ToernooiText:hover
 {
-    color: #ee7d11;
+    color: #ff9623 ;
     font-size: 33px;
 }
 
@@ -32,7 +32,7 @@ html
 #NavBarTextSpelersToevoegen:hover
 {
     font-weight: bold;
-    color: #ee7d11;
+    color: #ff9623 ;
     font-size: 25px;
 }
 
@@ -40,34 +40,13 @@ html
 {
     font-weight: bold;
     font-size: 25px;
-    color: #ee7d11;
-}
-
-#FooterColor
-{
-    background-color: #f8f9fa;
+    color: #ff9623 ;
 }
 
 .FormText
 {
     font-weight: bold;
     font-size: 37px;
-}
-
-.FooterText a
-{
-    font-weight: bold;
-    text-transform:  uppercase;
-    color: #007bff;
-}
-
-.FooterText a:hover
-{
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #ee7d11;
-    font-size: 17px;
 }
 
 
@@ -97,14 +76,6 @@ body {font-family: Verdana, sans-serif; background-size: cover;min-height: 100%;
     .share-icon {font-size: 24px; color: #fff;padding: 25px;}
     .share-wrap {max-width: 1100px; text-align: center; margin: 60px auto;}
     .final {margin: 4.5em 0; width: 200%; margin-left: 210px;}
-
-
-
-
-
-.share-icon {color: #fff; opacity: 0.35; }
-.share-icon:hover { opacity:1;  -webkit-animation: pulse 0.5s; animation: pulse 0.5s;}
-
 
 
 @media screen and (min-width: 981px) and (max-width: 1099px) {
