@@ -86,14 +86,16 @@
                     <option>Drenthe College</option>
                     <option>Graafschap College</option>
                     <option>Katholiek Onderwijs Vlaanderen</option>
+                    <option>Koning Willem I College</option>
                     <option>Rijn Ijssel College</option>
-                    <option>ROC de Leijgraaf</option>
                     <option>ROC Horizon College</option>
+                    <option>ROC de Leijgraaf</option>
                     <option>ROC ID College</option>
                     <option>ROC Midden Nederland</option>
                     <option>ROC TOP</option>
                     <option>ROC A12</option>
-                    <option>Koning Willem I College</option>
+                    <option>ROC van Amsterdam</option>
+                    <option>Summa college</option>
                 </select>
             </div>
         </div>
