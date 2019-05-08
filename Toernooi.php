@@ -22,7 +22,7 @@
 
     <title>Tennistoernooi</title>
 </head>
-<body>
+<body style="background-color: #2a6797">
 <header>
     <?php
     include_once'./inc/Header.php';
