@@ -71,7 +71,6 @@ body {font-family: Verdana, sans-serif; background-size: cover;min-height: 100%;
     .champion li, .ronde li {background-color: #fff;box-shadow: none; opacity: 1;}
     .ronde-een li {opacity: 1;}
     .ronde-een li.speler {background-color: #fff;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);opacity: 1; width: 150%;}
-    .vote-options {display: block;height: 52px;}
     .share .container {margin: 0 auto; text-align: center;}
     .share-icon {font-size: 24px; color: #fff;padding: 25px;}
     .share-wrap {max-width: 1100px; text-align: center; margin: 60px auto;}

@@ -30,7 +30,8 @@
 
 
     /**Random Speler 1**/
-    $randuser1 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id1'";$Result1 = mysqli_query($conn, $randuser1);
+    $randuser1 = "SELECT voornaam, achternaam FROM spelers WHERE id='$id1'";
+    $Result1 = mysqli_query($conn, $randuser1);
     while($row1 = mysqli_fetch_assoc($Result1))
     {
         if ($uitslag1 > $uitslag2)

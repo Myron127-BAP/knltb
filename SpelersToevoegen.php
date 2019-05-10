@@ -8,20 +8,8 @@
     if ($_SERVER['REQUEST_METHOD']== 'POST')
     {
 
-        //Dit voorkomt dat er niet de zelfde personen toegevoegd worden in de database, Dit is uit gecommit aangezien er mensen zijn met de zelfde namen
 
-        //$Voornaam = $_POST['Voornaam_Register'];
 
-        //$query = "SELECT * FROM spelers WHERE voornaam= '".$Voornaam."'";
-
-        //$check = mysqli_query($conn, $query);
-
-        //if (mysqli_num_rows($check) >= 1)
-        //{
-        //    $_SESSION['message'] = "$Voornaam bestaat al";
-        //}
-        //else
-        //{
 
         //Het toevoegen van personen in de Database
             $Voornaam = $conn->real_escape_string($_POST['Voornaam_Register']);
@@ -38,7 +26,6 @@
                 {
                     $_SESSION['message'] = "Speler is niet toegevoegd";
                 }
-        //}
     }
 
 ?>
