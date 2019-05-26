@@ -7,25 +7,32 @@
 
     if ($_SERVER['REQUEST_METHOD']== 'POST')
     {
+        $School = ($_POST['School_Register']);
 
+        //Dit voorkomt dat er niet de zelfde personen toegevoegd worden in de database
+        $Voornaam = $_POST['Voornaam_Register'];
+        $query = "SELECT * FROM spelers WHERE voornaam= '".$Voornaam."'";
+        $check = mysqli_query($conn, $query);
+        if (mysqli_num_rows($check) >= 1)
+        {
+            $_SESSION['message'] = "$Voornaam van $School bestaat al";
+        }
 
+        else {
 
-
-        //Het toevoegen van personen in de Database
+            //Het toevoegen van personen in de Database
             $Voornaam = $conn->real_escape_string($_POST['Voornaam_Register']);
             $Achternaam = $conn->real_escape_string($_POST['Achternaam_Register']);
             $School = ($_POST['School_Register']);
 
             $sql = "INSERT INTO spelers(voornaam, achternaam, school)" . "VALUES ('$Voornaam', '$Achternaam', '$School')";
 
-            if (mysqli_query($conn, $sql))
-            {
+            if (mysqli_query($conn, $sql)) {
                 $_SESSION['message'] = "$Voornaam $Achternaam van $School is toegevoegd";
+            } else {
+                $_SESSION['message'] = "Speler is niet toegevoegd";
             }
-            else
-                {
-                    $_SESSION['message'] = "Speler is niet toegevoegd";
-                }
+        }
     }
 
 ?>

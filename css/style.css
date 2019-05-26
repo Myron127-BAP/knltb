@@ -64,7 +64,19 @@ body {font-family: Verdana, sans-serif; background-size: cover;min-height: 100%;
     .split-two .ronde {margin: 0 0 0 2.5%;}
     .wedstrijd {margin:0;width: 115%;padding: 10px 0;height:60px;-webkit-transition: all 0.2s;transition: all 0.2s;}
     .score {font-size: 11px;text-transform: uppercase;float: right;color: #2C7399;font-weight: bold;font-family: 'Roboto Condensed', sans-serif;position: absolute;right: 5px;}
-    .speler {padding: 0 5px;margin: 3px 0;height: 25px; line-height: 25px;white-space: nowrap; overflow: hidden;position: relative;}
+
+    .speler
+    {
+        font-size: 15px;
+        padding: 0 5px;
+        margin: 3px 0;
+        height: 25px;
+        line-height: 25px;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+    }
+
     .ronde-twee .wedstrijd {margin:0; height: 60px;padding: 55px 0; width: 200%; margin-left: 100px;}
     .ronde-drie .wedstrijd {margin:0; height: 60px; padding: 110px 0; width: 200%; margin-left: 133px;}
     .ronde-details {font-family: ' ', sans-serif; font-size: 13px; color: white;text-transform: uppercase;text-align: center;height: 10px;}
